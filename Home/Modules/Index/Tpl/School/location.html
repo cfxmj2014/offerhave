@@ -1,0 +1,89 @@
+<extend name="Common:base"/>
+<block name="body">
+<!-- title -->
+<div class="l-title for-header">
+  <div class="container">      
+    <div class="row">
+      <center>
+        <h1><b>梦想，从有offer开始。</b></h1>
+        <h2>我们拒绝<span class="base-color">院校佣金</span>，只为给你<span class="base-color">更好的未来</span>。</h2>
+      </center>
+    </div>          
+  </div>
+</div>
+<!-- 定位学校 -->
+<div class="bg-light-gray l-school">
+  <div class="container">
+    <h3><b>你的名校方案</b></h3>
+    <hr class="hr-style">
+    <div class="table-responsive">
+      <table class="table location-table">
+        <thead>
+          <tr>
+            <th>学校</th>
+            <th>世界排名</th>
+            <th>英国排名</th>
+            <th>院校优势</th> 
+          </tr>
+        </thead>
+        <tbody>
+        <foreach name="School.Recommend" item="v">
+          <tr>
+            <td  name={$school=$v.sName}>
+              <a href="{:U("Index/School/index",array("school"=>$school,"major"=>"all"),"")}" target="_blank" class="location-school">
+                <img src="{$v.image}" class="s-img">
+                <span class="s-name">{$v.sName}</span>
+              </a>
+            </td>
+            <td><span class="base-color">{$v.Wsort}</span>（QS）／<span class="base-color">{$v.Csort}</span>（上海交大版）</td>
+            <td><span class="base-color">{$v.Esort}</span>（QS）</td>
+            <td>{$v.Advantage}</td>
+          </tr>
+        </foreach>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="container">
+    <h4><b>最佳保底学校</b></h4>
+    <div class="table-responsive">
+      <table class="table location-table">
+        <tbody>
+        <foreach name="School.Safe" item="v">
+          <tr>
+            <td name={$school=$v.sName}>
+              <a href="{:U("Index/School/index",array("school"=>$school,"major"=>"all"),"")}" target="_blank" class="location-school">
+                <img src="{$v.image}" class="s-img">
+                <span class="s-name">{$v.sName}</span>
+              </a>
+            </td>
+            <td><span class="base-color">{$v.Wsort}</span>（QS）／<span class="base-color">{$v.Csort}</span>（上海交大版）</td>
+            <td><span class="base-color">{$v.Esort}</span>（QS）</td>
+            <td>{$v.Advantage}</td>
+          </tr>
+        </foreach>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- 推荐的顾问 -->
+<div class="bg-dark-gray"><br>
+  <div class="container">
+    <div class="title">看看这些名校的申请达人</div><br>
+    <div class="row" cstId={$cstId=$v.cstId}>
+      <foreach name="cstInfo" item="v">
+        <div class="col-xs-6 col-md-2">
+          <center>
+            <a href="{:U("Index/Consultant/index",array('cstId'=>$cstId),"")}">
+              <img src="{$v.image}" class="img-circle" width="120px" height="120px;">
+            </a>
+          <h4>{$v.cstName}</h4></center>
+          <p style=" color:#979797; width: 200px;">{$v.eName}</p>
+        </div>
+      </foreach>
+    </div>
+    <br><br>
+  </div>
+</div>
+</block>

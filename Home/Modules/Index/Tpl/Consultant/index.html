@@ -1,0 +1,92 @@
+<extend name="Common:base"/>
+<block name="body">
+<!-- 页面横幅 -->
+<div class="consultant-banner">  
+	<div class="cst-tag for-header">
+	  <div class="container">
+	  	<div class="row">
+	  		<div class="col-md-12">
+	    		<img src="{$cstInfo.image}" class="img-circle cst-photo">
+			    <div class="cst-info-list"> 
+			      <h3>{$cstInfo.cstName} <img src="__PUBLIC__/images/p-1.png" width="30px" height="30px"></h3>
+			      <p>{$cstInfo.sName}，{$cstInfo.cstMajor} · {$cstInfo.cstType}</p>
+			      <div class="verify-info">
+			        <img src="__PUBLIC__/images/p-2.png"><span>&nbsp;线下身份 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			        <img src="__PUBLIC__/images/p-2.png"><span>&nbsp;文书水平</span>
+			      </div>
+			      <div class="book-info">
+				      <div class="info-price">
+				        <h4>个人陈述文书价格</h4>
+				        <h3>CNY <span class="base-color">{$first.price}</span></h3>
+				      </div>
+					  <div class="to-book" id="{$cstId=$cstInfo.cstId}">
+					  	<a href="{:U('Index/Application/index',array("cstId"=>$cstId),"")}">
+					    	<button type="button" class="btn form-control to-book-bt font-color-white already-login">申请预订</button>
+						</a>
+					  </div>
+					  <div class="to-book">
+					    <a href="" data-toggle="modal" data-target="#myModal" class="login-reg unlogin"><button type="button" class="btn form-control to-book-bt font-color-white">申请预定</button></a>
+					  </div>   
+			      </div>
+			    </div>
+			</div>
+		</div>
+	  </div>
+	</div>
+</div>  
+<!-- 顾问详细信息 -->
+<div class="bg-dark-gray">
+  <div class="container">
+    <div class="panel panel-default panel-cst">
+      <div class="panel-heading">关于我</div>
+      <div class="panel-body">
+        <h3>Hi there! I am {$cstInfo.cstName}</h3>
+        <h6>学校: {$cstInfo.sName}</h6>
+        <h6>专业：{$cstInfo.cstMajor}</h6>
+        <h6>达人类型：{$cstInfo.cstType}</h6>
+        <h6>语言沟通能力：{$cstInfo.language}</h6>
+        <p>{$cstInfo.introduction}</p>
+      </div>
+    </div>
+    <div class="panel panel-default panel-cst">
+      <div class="panel-heading">我提供的服务</div>
+        <ul class="list-group">
+        	<foreach name="serviceInfo" item="v">
+				<li class="list-group-item">
+				  <div class="container">                  
+					<div class="row">
+					  <div class="col-md-4 service-img">
+						<img src="{$v.sImage}" width="40px" height="40px">
+					  </div>
+					  <div class="col-md-4 service-title">
+						<h3>{$v.sName}</h3>
+						<small>{$v.sInfo}</small>
+					  </div>
+					  <div class="col-md-4 service-price">
+						<h3>CNY <span class="base-color">{$v.price}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="m-tag">{$v.sTag}</span></h3>
+						<p>{$v.sTag}</p>
+					  </div>                
+					</div>
+				  </div>
+				</li>
+			</foreach>
+		</ul>
+    </div>
+    <div class="m-to-book">
+		<a href="{:U('Index/Application/index',array("cstId"=>$cstId),"")}">
+			<button type="button" class="btn form-control to-book-bt font-color-white already-login">申请预订</button>
+		</a>
+		<a href="" data-toggle="modal" data-target="#myModal" class="login-reg unlogin"><button type="button" class="btn form-control to-book-bt font-color-white">申请预订</button></a>  
+	</div>
+  </div>
+</div>
+
+</block>
+<block name="script">
+  <script type="text/javascript">
+  // 邮箱自动补全
+  $(function(){
+  $.AutoComplete('.input-email');
+  });
+  </script> 
+</block>

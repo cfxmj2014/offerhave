@@ -1,0 +1,67 @@
+<extend name="Common:base"/>
+<block name="body">
+	<!-- 页面横幅 -->
+	<div class="package-bg">
+	  <div class="package-title" >
+	    <h1>&nbsp;<span style="color: #999">留学</span>大事儿，</h1>
+	    <h1>&nbsp;对自己负责。</h1>
+	    <h1>&nbsp;就要这么<span class="base-color">任性！</span></h1>
+	  </div>
+<!-- 	  <div class="book-info">
+	    <div class="personal-statement-list">
+	      <div style="font-size:16px;color:#999;">套餐任性活动价</div>
+	      <div class="font-color-white" style="font-size:25px;">CNY {$Price}</div>
+	    </div>
+		<div class="to-book already-login">
+		  <a href="{:U("Index/Application/index",array("cstId"=>0),"")}">
+		    <button type="button" class="btn to-book-bt font-color-white application">申请预定</button>
+		  </a>
+		</div>
+		<div class="to-book unlogin">
+		  <a href="#" data-toggle="modal" data-target="#myModal" class="login-reg"><button type="button" class="btn to-book-bt font-color-white">申请预定</button></a>
+		</div>
+	  </div> -->
+        <div class="book-package-info">
+  	      <div class="info-price">
+  	        <h4>套餐任性活动价</h4>
+  	        <h3>CNY <span class="base-color">{$Price}</span></h3>
+  	      </div>
+  		  <div class="to-book">
+  		  	<a href="{:U("Index/Application/index",array("cstId"=>0),"")}">
+  		    	<button type="button" class="btn form-control to-book-bt font-color-white already-login">申请预订</button>
+  			</a>
+  		  </div>
+  		  <div class="to-book">
+  		    <a href="" data-toggle="modal" data-target="#myModal" class="login-reg unlogin"><button type="button" class="btn form-control to-book-bt font-color-white">申请预定</button></a>
+  		  </div>   
+        </div>
+	</div>
+	<!-- 套餐介绍 -->
+	<div class="bg-light-gray for-header"><br>
+      <div class="container">
+        <div class="title">套餐内容介绍</div>
+        <div class="content">用我们最优质的资源，申请你的梦想名校！</div><br><br><br><br><br><br><br><br><br><br><br>
+      </div>
+    </div>
+    <div class="bg-dark-gray"><br>
+      <div class="container">
+        <div class="title">怎么保障我的权益？</div>
+        <div class="content">让留学更加透明，每一步你都看得见！先付定金后付全款，保障双方权益。</div><br><br><br><br><br><br><br><br><br><br><br>
+      </div>
+    </div>	
+    <div class="container m-to-book">
+    	<br>
+		<a href="{:U("Index/Application/index",array("cstId"=>0),"")}">
+			<button type="button" class="btn form-control to-book-bt font-color-white already-login">申请预订</button>
+		</a>
+		<a href="" data-toggle="modal" data-target="#myModal" class="login-reg unlogin"><button type="button" class="btn form-control to-book-bt font-color-white">申请预订</button></a>  
+	</div>
+</block>
+<block name="script">
+  <script type="text/javascript">
+  // 邮箱自动补全
+  $(function(){
+  $.AutoComplete('.input-email');
+  });
+  </script>
+</block>

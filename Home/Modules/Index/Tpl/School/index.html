@@ -1,0 +1,80 @@
+<extend name="Common:base"/>
+<block name="body">
+<div class="to-m-package for-header">
+	<h1>&nbsp;&nbsp;不想费事儿？
+	一站式服务<span><a href="{:U("Index/Package/index","","")}" class="click-here">戳这儿。</a></span></h1>
+	<h1>&nbsp;&nbsp;从<span class="base-color">现在</span>开始，直到<span class="base-color">入学</span>，不再费心。</h1>
+</div>
+<!-- 页面横幅 -->
+<div class="container-fluid school-banner">
+	<div class="school-info text-center" >
+		<h1>{$SchoolInfo.school}</h1>
+		<center><img src="__PUBLIC__/images/p-1.png" width="50px" height="50px"></center>
+		<h1>{$SchoolInfo.major}</h1>
+		<h6>{$Countcst}位达人· 0个特色服务</h6>
+	</div>
+	<div class="to-package">
+		<h1>&nbsp;&nbsp;不想费事儿？</h1>
+		<h1>&nbsp;&nbsp;一站式服务<span><a href="{:U("Index/Package/index","","")}" class="click-here">戳这儿。</a></span></h1>
+		<h1>&nbsp;&nbsp;从<span class="base-color">现在</span>开始，直到<span class="base-color">入学</span>，不再费心。</h1>
+	</div>
+</div>
+<!-- 学校顾问概况 -->
+<div class="bg-light-gray ">
+	<div class="container">
+		<h5>{$Countcst}位达人·{$SchoolInfo.school}·{$SchoolInfo.major}</h5>
+	</div>
+	<div class="container">
+		<foreach name="cstInfo" item="v">
+			<div class="row cst-info">
+				<div class="col-md-4 cst-img text-center">
+					<img src={$v.image} class="img-circle" width="150px" height="150px">
+				</div>
+				<div class="col-md-4 cst-introduce" >
+					<h3>{$v.cstName}</h3>
+					<h5><span class="cst-type">达人类型：</span>{$v.cstType}&nbsp;&nbsp;{$v.cstMajor}</h5>
+					<p class="cst-introduce">{$v.introduction}</p>
+				</div>
+				<div class="col-md-4 cst-price" >
+					<h3>CNY<span class="base-color"> {$v.firstPrice}</span><span class="ps-m-title">(PS 价格)</span></h3>
+					<h5 na="{$cstId=$v.cstId}" class="ps-title text-center">(PS 价格)</h5>
+					<!-- <br> -->
+					<a href="{:U('Index/Consultant/index',array('cstId'=>$cstId),'')}">
+						<button type="button" class="btn cst-detail-bt form-control">查看详情</button>
+					</a>
+				</div>
+			</div>
+		</foreach>
+	</div>
+</div>
+<!-- 其它热门学校 -->
+<div class="bg-dark-gray">
+	<div class="container ">
+		<div class="title">看看其它热门学校</div>
+		<br>
+		<div class="row">
+			<foreach name="recommend" item="v">
+				<div class="col-xs-12 col-md-4 u-img">
+		          <div class="thumbnail" id="{$s=$v.sName}">
+		            <a href="{:U("Index/School/index",array('school'=>$s,'major'=>'all'),"")}"/>
+						<img src="{$v.image}" >
+							<div class="carousel-caption">
+								<h3 class="index-name">{$v.sName}</h3>
+								<h4 class="e-name">{$v.eName}</h4>
+							</div>
+						</a>
+					</div>
+				</div>
+			</foreach>
+		</div>
+	</div>
+</div>
+</block>
+<block name="script">
+  <script type="text/javascript">
+  // 邮箱自动补全
+  $(function(){
+  $.AutoComplete('.input-email');
+  });
+  </script>
+</block>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1,user-scalable=yes">
+    <meta name="renderer" content="webkit">
+    <meta content="" name="Keywords">
+	  <meta content="" name="Description">
+    <title>有offer</title>
+	  <script src="__PUBLIC__/js/jquery-2.1.1.min.js"></script>
+    <script src="__PUBLIC__/js/bootstrap.min.js"></script>  
+    <script>
+      var LoginURL = "{:U('/Index/Index/Login','','')}";
+      var IsLoginURL = "{:U('/Index/Index/IsLogin','','')}";
+      var ParaIsOkURL = "{:U('/Index/Index/ParaIsOk','','')}";
+      var RegisterURL = "{:U('/Index/Index/Register','','')}";
+      var ToSchoolURL = "{:U('/Index/School/index','','')}";
+      var ChangeNumURL = "{:U('/Index/Application/UpdateSession','','')}";
+      var ApplicationURL = "{:U('/Index/Application/SaveApplication','','')}";
+      var ConfirmURL = "{:U('/Index/Application/Confirm','','')}";
+      var LocationURL = "{:U('/Index/School/ChooseSchool','','')}";
+    </script> 
+    <script src="__PUBLIC__/js/base.js"></script>
+    <!--HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries 
+    WARNING: Respond.js doesn't work if you view the page via file://-->	 
+    <!--[if lt IE 9]>
+	  <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css">
+	  <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/base.css">
+    <block name="style">
+      <!-- 控制首页页头不同 -->
+    </block>
+  </head>
+  <body>
+    <block name="header">
+      <!-- 页头 -->
+      <include file="Common:header"/>
+    </block>
+    <block name="body">
+      <!-- 这里是内容区域 -->
+    </block>
+    <block name="footer">
+      <!-- 页脚 -->
+      <include file="Common:footer"/>
+    </block>
+  </body>
+  <block name="script">
+    <!-- 邮箱自动补全 -->
+  </block> 
+
+
+  <script>
+  // 调用headroom js
+  $(function() {
+      var header = new Headroom(document.querySelector("#header"), {
+          tolerance: 5,
+          offset : 205,
+          classes: {
+            initial: "animated",
+            pinned: "slideDown",
+            unpinned: "slideUp"
+          }
+      });
+      header.init();
+
+      var bttHeadroom = new Headroom(document.getElementById("btt"), {
+          tolerance : 0,
+          offset : 500,
+          classes : {
+              initial : "slide",
+              pinned : "slide--reset",
+              unpinned : "slide--down"
+          }
+      });
+      bttHeadroom.init();
+  }());
+  </script>
+</html>

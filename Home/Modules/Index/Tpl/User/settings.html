@@ -1,0 +1,46 @@
+<extend name="Common:base"/>
+<block name="body">
+<!-- 导航 -->
+<div class="for-header user-items">
+  <div class="container">
+    <ul>
+      <li><a href="{:U('/Index/User/Application','','')}">Application</a></li>
+      <li><a href="{:U('/Index/User/Resume','','')}">Resume</a></li>
+      <li><a href="{:U('/Index/User/Wishlist','','')}">Wishlist</a></li>
+      <li class="items-active"><a href="{:U('/Index/User/Settings','','')}"><span class="font-color-white">Settings</span></a></li>
+    </ul>
+  </div>
+</div>
+<!-- 修改密码 -->
+<div class="bg-light-gray">
+  <div class="container">
+    <div class="row user-row">
+      <div class="col-md-3 sent-app">
+        <h4>Security Setting</h4>
+      </div>
+      <div class="col-md-9">
+        <div class="panel panel-default">
+          <div class="panel-heading">Change your password</div>
+          <div class="panel-body">
+            <form>
+              <div class="info-list">
+                <span>Current Password: </span>
+                <input type="text">                
+              </div>
+              <div class="info-list">
+                <span>New Password: &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <input type="text">                
+              </div>
+              <div class="info-list">
+                <span>Confrim Password: </span>
+                <input type="text">                
+              </div >
+              <div><a href="#"><button type="button" class="btn form-control setting-bt">Done</button></a></div>
+            </form>  
+          </div>
+        </div>
+      </div>      
+    </div><br><br>        
+  </div>
+</div>
+</block>

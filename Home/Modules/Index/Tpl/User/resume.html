@@ -1,0 +1,187 @@
+<extend name="Common:base"/>
+<block name="body">
+<!-- 导航 -->
+<div class="for-header user-items">
+  <div class="container">
+    <ul>
+      <li><a href="{:U('/Index/User/Application','','')}">Application</a></li>
+      <li class="items-active"><a href="{:U('/Index/User/Resume','','')}"><span class="font-color-white">Resume</span></a></li>
+      <li><a href="{:U('/Index/User/Wishlist','','')}">Wishlist</a></li>
+      <li><a href="{:U('/Index/User/Settings','','')}">Settings</a></li>
+    </ul>
+  </div>
+</div>
+<!-- 个人信息 -->
+<div class="bg-light-gray">
+  <div class="container">
+    <div class="row user-row">
+      <div class="col-md-3 sent-app">
+        <h4>Personal Information</h4>
+      </div>
+      <div class="col-md-9">
+        <div class="panel panel-default">
+          <div class="panel-heading">Personal Information</div>
+          <div class="panel-body">
+            <form>
+              <div class="info-list">
+                <p>Your Name: </p>
+                <input type="text"><!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" placeholder="Last Name">   -->            
+              </div>
+              <div class="info-list">
+                <span>Gender: </span>
+                <select>
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>Age: </span>
+                <select>
+                  <option>18</option>
+                  <option>19</option>
+                  <option>20</option>
+                  <option>21</option>
+                  <option>22</option>
+                  <option>23</option>
+                </select>
+              </div>
+              <div class="info-list">
+                <p>University you study/graduate: </p>
+                <input type="text">                
+              </div>
+              <div class="info-list">
+                <p>Subject Area: </p>
+                <select>
+                  <option>Economics and Finance</option>
+                  <option>Business </option>
+                  <option>Engineering</option>
+                  <option>Social Science</option>
+                  <option>Natural Science</option>
+                  <option>Medical Education and Medicine</option>
+                  <option>Art Humanity</option>
+                </select>
+              </div>
+              <div class="info-list">
+                <span>Degree: </span>
+                <select>
+                  <option>Master</option>
+                  <option>Bachelor </option>
+                  <option>Phd </option>
+                  <option>Others </option>
+                </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="t-fellow">Are you a teaching fellow?: 
+                  <select>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </span>
+              </div>
+              <div class="info-list">
+                <p>Types of consultant: </p>
+                <select>
+                  <option>Student(Native)</option>
+                  <option>Graduated student(Native) </option>
+                  <option>Teaching fellow(Native) </option>
+                  <option>Student(International) </option>
+                  <option>Graduated student(International) </option>
+                  <option>Teaching fellow(International) </option>
+                </select>              
+              </div>
+              <div class="info-list">
+                <p>Language: </p>
+                <input type="text" placeholder="e.g. English, Chinese "> 
+              </div>
+              <div class="info-list">
+                <p>Introduction: </p>
+                <textarea class="message form-control"></textarea>
+              </div>
+            </form>  
+          </div>
+        </div>
+      </div>          
+    </div>
+    <hr class="hr-style">
+    <div class="row user-row">
+      <div class="col-md-3 sent-app">
+        <h4>Contact Details</h4>
+      </div>
+      <div class="col-md-9">
+        <div class="panel panel-default">
+          <div class="panel-heading">Contact Details</div>
+          <div class="panel-body">
+            <form>
+              <div class="info-list">
+                <p>Cell Phone: </p>
+                <select>
+                  <option>+44 UK</option>
+                  <option>+86 China</option>
+                  <option>+1   USA</option>
+                  <option>+61 Australia</option>
+                  <option>+64 New Zealand</option>
+                </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" class="cell-phone">              
+              </div>
+              <div class="info-list">
+                <p>Email: </p>
+                <input type="text">                
+              </div>
+              <div class="info-list">
+                <p>Wechat: </p>
+                <input type="text" placeholder="If you have one">                
+              </div>
+              <div class="info-list">
+                <p>QQ: </p>
+                <input type="text" placeholder="If you have one">                
+              </div>
+            </form>  
+          </div>
+        </div>
+      </div>          
+    </div>
+    <hr class="hr-style">
+    <div class="row user-row">
+      <div class="col-md-3 sent-app">
+        <h4>Photo</h4>
+      </div>
+      <div class="col-md-9">
+        <div class="panel panel-default">
+          <div class="panel-heading">Photo</div>
+          <div class="panel-body">
+            <form>
+              <div class="info-list">
+                <p>Please upload one clear photo of yours. Any logo or name of your university will be much appreciated and welcomed to be showed in the photo.</p>
+                <img src="__PUBLIC__/images/p-11.png"><br><br>
+                <button type="button" class="btn form-control upload-bt">UPLOAD</button>
+              </div>
+            </form>  
+          </div>
+        </div>
+      </div>          
+    </div>
+    <hr class="hr-style">
+    <div class="row user-row">
+      <div class="col-md-3 sent-app">
+        <h4>Identity Documents</h4>
+      </div>
+      <div class="col-md-9">
+        <div class="panel panel-default">
+          <div class="panel-heading">Identity Documents</div>
+          <div class="panel-body">
+            <form>
+              <div class="info-list">
+                <p>Please upload your STUDENT CARD or other IDENTIFICATION</p>
+                <img src="__PUBLIC__/images/p-11.png"><br><br>
+                <button type="button" class="btn form-control upload-bt">UPLOAD</button>
+            </form> 
+          </div>
+        </div>
+      </div>          
+    </div>
+    <hr class="hr-style">
+  </div>
+  <div class="container">
+    <center>
+      <a href="#"><button type="button" class="btn form-control be-cst-bt">SUBMIT</button></a> 
+    </center>
+  </div>
+</div>
+</block>

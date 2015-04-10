@@ -1,0 +1,169 @@
+<extend name="Common:base"/>
+<block name="body">
+<!-- 申请step-->
+<div class="step-course">
+  <div class="container">     
+    <div class="row">
+      <div class="col-xs-2 col-md-3">
+        <h2>STEP 01</h2>
+        <h4>Register a account</h4>
+      </div>
+      <div class="col-xs-2 col-md-2">
+        <img src="__PUBLIC__/images/p-14.png" width="30px" height="30px"> 
+      </div>
+      <div class="col-xs-2 col-md-3 course-active">
+        <h2>STEP 02</h2>
+        <h4>Your personal information</h4>    
+      </div>
+      <div class="col-xs-2 col-md-2 ">
+        <img src="__PUBLIC__/images/p-14.png" width="30px" height="30px"> 
+      </div>
+      <div class="col-xs-2 col-md-3">
+        <h2>STEP 03</h2>
+        <h4>Submit and verify</h4>              
+      </div>
+    </div>      
+  </div>
+</div>
+<!-- 申请成为顾问-->
+<div class="bg-light-gray for-header">
+  <div class="container">
+    <div class="row user-row">
+      <div class="col-md-3">
+        <h4>PERSONAL INFORMATION</h4>
+        <p class="p-info">Offerhave.com promises that your personal information filled in the website will be protected and such information only can be acquired by customers who finish their payment.</p>
+      </div>
+      <div class="col-md-9">
+        <form>
+          <div class="info-list">
+            <p>Your Name: </p>
+            <input type="text"><!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" placeholder="Last Name">   -->            
+          </div>
+          <div class="info-list">
+            <span>Gender: </span>
+            <select>
+              <option>Male</option>
+              <option>Female</option>
+            </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span>Age: </span>
+            <select>
+              <option>18</option>
+              <option>19</option>
+              <option>20</option>
+              <option>21</option>
+              <option>22</option>
+              <option>23</option>
+            </select>
+          </div>
+          <div class="info-list">
+            <p>University you study/graduate: </p>
+            <input type="text">                
+          </div>
+          <div class="info-list">
+            <p>Subject Area: </p>
+            <select>
+              <option>Economics and Finance</option>
+              <option>Business </option>
+              <option>Engineering</option>
+              <option>Social Science</option>
+              <option>Natural Science</option>
+              <option>Medical Education and Medicine</option>
+              <option>Art Humanity</option>
+            </select>
+          </div>
+          <div class="info-list">
+            <span>Degree: </span>
+            <select>
+              <option>Master</option>
+              <option>Bachelor </option>
+              <option>Phd </option>
+              <option>Others </option>
+            </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="t-fellow">Are you a teaching fellow?: 
+              <select>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </span>
+          </div>
+          <div class="info-list">
+            <p>Types of consultant: </p>
+            <select>
+              <option>Student(Native)</option>
+              <option>Graduated student(Native) </option>
+              <option>Teaching fellow(Native) </option>
+              <option>Student(International) </option>
+              <option>Graduated student(International) </option>
+              <option>Teaching fellow(International) </option>
+            </select>              
+          </div>
+          <div class="info-list">
+            <p>Language: </p>
+            <input type="text" placeholder="e.g. English, Chinese "> 
+          </div>
+          <div class="info-list">
+            <p>Introduction: </p>
+            <textarea class="message form-control"></textarea>
+          </div>
+        </form>  
+      </div>
+    </div>         
+    <hr class="hr-style">
+    <div class="row user-row">
+      <div class="col-md-3">
+        <h4>CONTACT DETAILS</h4>
+        <p class="p-info">Offerhave.com promises that your personal information filled in the website will be protected and such information only can be acquired by customers who finish their payment.</p>
+      </div>
+      <div class="col-md-9">
+        <form>
+          <div class="info-list">
+            <p>Cell Phone: </p>
+            <select>
+              <option>+44 UK</option>
+              <option>+86 China</option>
+              <option>+1   USA</option>
+              <option>+61 Australia</option>
+              <option>+64 New Zealand</option>
+            </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" class="cell-phone">              
+          </div>
+          <div class="info-list">
+            <p>Email: </p>
+            <input type="text">                
+          </div>
+          <div class="info-list">
+            <p>Wechat: </p>
+            <input type="text" placeholder="If you have one">                
+          </div>
+          <div class="info-list">
+            <p>QQ: </p>
+            <input type="text" placeholder="If you have one">                
+          </div>
+        </form>  
+      </div>          
+    </div>
+    <hr class="hr-style">
+    <div class="row user-row">
+      <div class="col-md-3">
+        <h4>RELEVANT MATERIALS</h4>
+        <p class="p-info">Offerhave.com promises that your materials uploaded to the website will be protected and such information only can be acquired by customers who finish their payment. </p>
+      </div>
+      <div class="col-md-9">
+        <form>
+          <div class="info-list">
+            <p>Please upload your STUDENT CARD or other IDENTIFICATION</p>
+            <img src="__PUBLIC__/images/p-11.png"><br><br>
+            <img src="__PUBLIC__/images/p-11.png"><br><br>
+            <button type="button" class="btn form-control upload-bt">UPLOAD</button>
+          </div>
+        </form>  
+      </div>
+    </div>
+    <hr class="hr-style">
+    <center>
+      <a href="{:U('/Index/Consultant/confirm','','')}"><button type="button" class="btn form-control be-cst-bt">SUBMIT</button></a> 
+    </center>
+  </div>          
+</div>
+</block>

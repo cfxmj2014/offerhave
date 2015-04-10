@@ -1,0 +1,40 @@
+<extend name="Common:base"/>
+<block name="body">
+<!-- step -->
+<div class="step-course">
+  <div class="container">     
+    <div class="row">
+      <div class="col-xs-2 col-md-3">
+        <h2>STEP 01</h2>
+        <h4>选择达人和服务</h4>
+      </div>
+      <div class="col-xs-2 col-md-2">
+        <img src="__PUBLIC__/images/p-14.png" width="30px" height="30px"> 
+      </div>
+      <div class="col-xs-2 col-md-3">
+        <h2>STEP 02</h2>
+        <h4>发送申请</h4>    
+      </div>
+      <div class="col-xs-2 col-md-2 ">
+        <img src="__PUBLIC__/images/p-14.png" width="30px" height="30px"> 
+      </div>
+      <div class="col-xs-2 col-md-3 course-active">
+        <h2>STEP 03</h2>
+        <h4>等待确认</h4>              
+      </div>
+    </div>      
+  </div>
+</div>
+<!-- 提示信息 -->
+<div class="container for-header a-success">
+	<center><br>
+    <img src="__PUBLIC__/images/p-13.png" width="176px" height="143px">	
+    <h1 class="text-center">有offer的靠谱小伙伴已经飞奔在帮您联系顾问的路上啦！</h1>
+    <h1 class="text-center">您的申请将在<span class="base-color">24小时</span>内得到回应。您可以从
+    <a href="{:U('/Index/User/Application','','')}" class="myApplication">我的申请</a>中查看状态。</h1><br>
+    <a href="{:U('/Index/Index/index','','')}">
+    	<button type="button" class="btn form-control backhome-bt" >回主页再看看去</button>
+    </a> 
+    </center>
+</div>
+</block>

@@ -1,0 +1,62 @@
+<extend name="Common:base"/>
+<block name="body">
+<!-- 导航 -->
+<div class="for-header user-items">
+  <div class="container">
+    <ul>
+      <li class="items-active"><a href="{:U('/Index/User/Application','','')}"><span class="font-color-white">Application</span></a></li>
+      <li><a href="{:U('/Index/User/Resume','','')}">Resume</a></li>
+      <li><a href="{:U('/Index/User/Wishlist','','')}">Wishlist</a></li>
+      <li><a href="{:U('/Index/User/Settings','','')}">Settings</a></li>
+    </ul>
+  </div>
+</div>
+<!-- 用户获得的服务信息 -->
+<div class="bg-light-gray">
+  <div class="container">
+    <div class="row user-row">
+      <div class="col-md-3 sent-app">
+        <h4>Sent Application</h4>
+      </div>
+      <div class="col-md-9">
+        <div class="panel panel-default panel-app">
+          <div class="panel-heading">
+            <!--<select style=" width: 140px; height: 35px;">
+              <option>All</option>
+              <option>Already dealt</option>
+              <option>Not deal yet</option>	
+            </select>-->
+            Sent Application
+          </div>
+          <div class="panel-body table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Number</th>
+                  <th>Service</th>
+                  <th>Consultant</th>
+                  <th>Date</th>
+                  <th>Deposit</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <foreach name="OrderInfo" item="v">
+          				<tr>
+          					<td>{$v.aId}</td>
+          					<td>{$v.service}</td>
+          					<td>{$v.cstName}</td>
+          					<td>{$v.time}</td>
+          					<td>{$v.totalPrice}</td>
+          					<td>{$v.status}</td>
+          				</tr>
+                </foreach>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</block>

@@ -1,0 +1,36 @@
+<extend name="Common:base"/>
+<block name="body">
+<!-- 导航 -->
+<div class="for-header user-items">
+  <div class="container">
+    <ul>
+      <li><a href="{:U('/Index/User/Application','','')}">Application</a></li>
+      <li><a href="{:U('/Index/User/Resume','','')}">Resume</a></li>
+      <li class="items-active"><a href="{:U('/Index/User/Wishlist','','')}"><span class="font-color-white">Wishlist</span></a></li>
+      <li><a href="{:U('/Index/User/Settings','','')}">Settings</a></li>
+    </ul>
+  </div>
+</div>
+<!-- wishlist -->
+<div class="bg-light-gray">
+  <div class="container">
+    <div class="row user-row">
+      <div class="col-md-3">
+        <h4>University</h4>
+      </div>
+      <div class="col-md-9 wish-list">
+        <p>Your wishlist is empty. Click 'hear button' to add into your wishlist.</p>
+      </div>
+    </div>
+    <hr class="hr-style">
+    <div class="row user-row">
+      <div class="col-md-3">
+        <h4>Consultant</h4>
+      </div>
+      <div class="col-md-9 wish-list">
+        <p>Your wishlist is empty. Click 'hear button' to add into your wishlist.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</block>

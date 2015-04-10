@@ -1,0 +1,113 @@
+<extend name="Common:base"/>
+<block name="body">
+<!-- 申请step-->
+<div class="step-course">
+  <div class="container">     
+    <div class="row">
+      <div class="col-xs-2 col-md-3">
+        <h2>STEP 01</h2>
+        <h4>选择达人和服务</h4>
+      </div>
+      <div class="col-xs-2 col-md-2">
+        <img src="__PUBLIC__/images/p-14.png" width="30px" height="30px"> 
+      </div>
+      <div class="col-xs-2 col-md-3 course-active">
+        <h2>STEP 02</h2>
+        <h4>发送申请</h4>    
+      </div>
+      <div class="col-xs-2 col-md-2 ">
+        <img src="__PUBLIC__/images/p-14.png" width="30px" height="30px"> 
+      </div>
+      <div class="col-xs-2 col-md-3">
+        <h2>STEP 03</h2>
+        <h4>等待确认</h4>              
+      </div>
+    </div>      
+  </div>
+</div>
+<!-- 服务table -->
+<div class="bg-light-gray for-header">
+  <div class="container">
+    <h3>确认申请</h3>
+    <hr class="hr-style">
+    <div class="table-responsive">
+      <table class="table application-list">
+        <thead>
+          <tr>
+            <th>服务名称</th>
+            <th>服务达人</th>
+            <th>服务类型</th>
+            <th>数量</th> 
+            <th>价格</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+        <foreach name="AppInfo" item="v">
+            <tr>
+              <td class="svId" id="{$v.svId}">{$v.sName}</td>
+              <td>{$cstName}</td>
+              <td>{$v.sType}</td>
+              <td>
+                <input type="button" class="min" value="-">
+                <input type="text" class="count" value="{$v.Num}">
+                <input type="button" class="add" value="+">
+              </td>
+              <td class="price" id="{$v.Price}">{$v.Price}</td>
+              <td><span class="deleteItem base-color">删除</span></td>
+            </tr>
+        </foreach>
+        </tbody>
+      </table>
+    </div>
+    <!-- 联系人信息 -->
+    <h3>联系人信息</h3>
+    <hr class="hr-style"><br>
+    <div class="row">
+      <div class="col-md-6 confirm-info">
+        <h4>联系人姓名(必填)</h4>
+        <input type="text" class="form-control uName" placeholder="请填写您的真实姓名">
+        <span class="tip-wrap tip-wrap-uName"></span>
+        <h4>联系人电话(必填)</h4>
+        <!--<select class="code">
+            <option>+86 China</option>
+            <option>+44 UK</option>
+            <option>+1 USA</option>
+            <option>+61 Australia</option>
+            <option>+64 New Zealand</option>
+        </select>&nbsp;&nbsp;-->
+        <input type="text" class="form-control uPhone" placeholder="请填写您的电话">
+        <span class="tip-wrap tip-wrap-uPhone"></span>
+        <h4>联系人邮箱(必填)</h4>
+        <input type="text" class="form-control uEmail input-email" placeholder="必须与注册邮箱一致">
+        <span class="tip-wrap tip-wrap-uEmail"></span>
+      </div>
+      <div class="col-md-6">
+        <h4>留言</h4>
+        <textarea class="message form-control"></textarea><br>
+      </div>
+    </div>
+  </div>
+  <div class="container application-confirm">
+    <div class="row">
+      <div class="col-md-4 col-treaty">
+        <input type="checkbox" class="read-treaty">&nbsp;我已阅读并同意&nbsp;<a href="#" class="treaty">有offer网签协议</a>
+      </div>
+      <div class="col-md-4 col-md-offset-3 col-total">
+        <h4><b>服务总额：</b><span class="base-color total-price">{$TotalMoney}</span> CNY</h4>
+      </div>
+      <div class="col-md-4 col-confirm">
+        <button type="button" class="btn form-control confirm-btn">提交申请</button>
+      </div>
+    </div>
+  </div><br>
+</div>
+</block>
+<block name="script">
+  <script type="text/javascript">
+  // 邮箱自动补全
+  $(function(){
+  $.AutoComplete('.input-email');
+  });
+  </script> 
+</block>

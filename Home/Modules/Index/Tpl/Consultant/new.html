@@ -1,0 +1,96 @@
+<extend name="Common:base"/>
+<block name="body">
+<!-- 页面横幅 -->
+<div class="be-cst-bg">
+  <div class="be-cst-title">
+    <h2>&nbsp;Be a consultant!</h2><br>
+    <h4>&nbsp;If you are willing to help international students to apply leading universities</h4>
+    <h4>&nbsp;Introduce yourself to international students, showing your unique and premium service.</h4>
+  </div>
+</div>
+<!-- 为什么选择我们 -->
+<div class="bg-light-gray for-header">
+  <div class="container">
+    <p class="title">why choosing us?</p>
+    <p class="content">
+      Every consultant is not only the ambassador of his university but also the expert of applying.<br>Easy money can be earned while providing your kind help to international prospective students.
+    </p>
+    <div class="row why-choose">
+      <div class="col-md-3">
+        <center>
+	        <img src="__PUBLIC__/images/p-7.png" width="88px" height="84px">
+	        <h4>Only few minutes for publishing</h4>
+        </center>
+        <p>Create your own profile, providing premium service of writing relevant documents for applying universities(e.g. PS, CV, or recommendation letters), essays and assignments, or proof reading.</p>
+      </div>
+      <div class="col-md-3">
+        <center>
+        	<img src="__PUBLIC__/images/p-8.png" width="124px" height="81px">
+        	<h4>Everyone can be a consultant</h4>
+        </center>
+        <p>No matter you are currently studying as a native/international graduate student,  an undergraduate student, or working as an agency, you are very welcomed to join us now as a consultant.</p>
+      </div>
+      <div class="col-md-3">
+        <center>
+        	<img src="__PUBLIC__/images/p-9.png" width="94px" height="84px">
+        	<h4>Safety and securety</h4>
+        </center>
+        <p>Offerhave.com provides guaranteed transfer methods by Bank transfer, Paypal, and Alipay(most reliable method in China). Deposit will be needed first(for customers) and full payment will be received(for consultant) while the delivering of consultant's service.</p>
+      </div>
+      <div class="col-md-3">
+        <center>
+        	<img src="__PUBLIC__/images/p-10.png" width="119px" height="84px">
+        	<h4>Completely free</h4>
+        </center>
+        <p>Offerhave.com will NEVER charge you for any service. Feel free for publishing your profile and provided services.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Instruction and Progress -->
+<div class="be-cst-bg2">
+  <div class="container">
+    <div class="title font-color-white">Instruction and Progress</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
+</div>
+<div class="bg-light-gray">
+  <div class="container">
+    <div class="title">New consultants</div>
+    <div class="content">
+      Are you ready for helping international students?
+    </div>
+    <!-- 新的顾问展示 -->
+    <div class="row" cstId={$cstId=$v.cstId}>
+      <foreach name="info" item="v">
+        <div class="col-xs-6 col-md-2">
+          <center>
+            <a href="{:U("Index/Consultant/index",array('cstId'=>$cstId),"")}">
+              <img src="{$v.image}" class="img-circle" width="120px" height="120px;">
+            </a>
+            <h4>{$v.cstName}</h4>
+          </center>
+          <p style=" color:#979797; ">{$v.eName}</p>
+        </div>
+      </foreach>
+    </div>
+  	<div>
+  		<center>
+  		  <a href="{:U('/Index/Consultant/Info','','')}"><button type="button" class="btn form-control be-cst-bt already-login">Be a consultant</button></a> 
+  		</center>
+  	</div>
+    <div>
+	  	<center>
+	  	  <a href="#" data-toggle="modal" data-target="#myModal" class="login-reg unlogin form-control"><button type="button" class="btn be-cst-bt" >Be a consultant</button></a> 
+	  	</center>
+    </div>
+  </div>
+</div>
+</block>
+<block name="script">
+  <script type="text/javascript">
+  // 邮箱自动补全
+  $(function(){
+  $.AutoComplete('.input-email');
+  });
+  </script> 
+</block>
