@@ -1,2 +1,2 @@
 this is a git test file
-modify test.txt
+modify test file
