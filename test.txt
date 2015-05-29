@@ -2,3 +2,6 @@ this is a git test file
 modify test file
 checkout on dev
 test
+vim test
+vim test is ok now
+
